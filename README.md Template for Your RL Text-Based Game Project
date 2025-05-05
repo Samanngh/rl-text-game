@@ -1,0 +1,55 @@
+# RL Text-Based Game Agents
+
+This repository contains implementations of **reinforcement learning agents** for a simple **text-based game environment** inspired by an interactive home setting. The project explores three learning algorithms to solve text-based quests:
+
+- ✅ **Tabular Q-Learning**
+- ✅ **Linear Function Approximation**
+- ✅ **Deep Q-Network (DQN)**
+
+The environment, called **Home World**, includes rooms like the kitchen, garden, bedroom, and living room. Each quest (e.g., *eat apple*, *take nap*) requires the agent to interpret text and navigate accordingly.
+
+---
+
+## 🧠 Project Structure
+
+rl/
+├── agent_tabular_ql.py # Tabular Q-learning agent
+├── agent_linear.py # Linear Q-learning agent
+├── agent_dqn.py # DQN agent (PyTorch)
+├── framework.py # Environment API
+├── utils.py # Feature extraction, helpers
+├── game.tsv # (ignored) Game description file
+
+
+---
+
+## 🚀 How to Run
+
+Clone the repo and navigate to the project:
+
+```bash
+git clone https://github.com/<your-username>/rl-text-game.git
+cd rl-text-game/rl
+Install dependencies:
+
+pip install torch numpy matplotlib tqdm
+Run an agent (example: DQN):
+
+python agent_dqn.py
+📊 Results
+
+Agent Type	Converged Avg Reward
+Tabular Q-Learning	~0.50
+Linear Approximation	~0.39
+Deep Q-Network (DQN)	~0.44
+📚 Concepts Practiced
+
+Reinforcement Learning from raw text inputs
+Epsilon-greedy exploration
+Function approximation with bag-of-words
+Deep Q-Learning using PyTorch
+Bellman updates and discounted reward computation
+⚠️ Notes
+
+game.tsv contains environment descriptions and is not pushed to GitHub.
+The environment API is built into framework.py (provided by the course).
